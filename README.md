@@ -5,9 +5,35 @@ This repository provides a **simple way to gain shell access** on any hosting pl
 ## 🔹 Features
 
 ✅ **Web-based system stats** – Monitor CPU, RAM, Disk, and Uptime\
-✅ **Tmate integration** – Get **instant SSH access** remotely\
+✅ **Tmate integration** – Get **instant SSH access** remotely (Docker deployment)\
 ✅ **Works on any platform** with Docker support\
-✅ **Lightweight & easy to deploy**
+✅ **Lightweight & easy to deploy**\
+✅ **NEW: Vercel-compatible** – Deploy monitoring dashboard on Vercel serverless
+
+## 🚀 Deployment Options
+
+### Option 1: Docker Deployment (Full Features)
+**Best for:** Full SSH access + monitoring
+
+- **Fork the repo** on GitHub
+- **Deploy it** on platforms like Railway, Render, Koyeb, or any Docker-supported host
+- **Get SSH access** via tmate + full system monitoring
+
+### Option 2: Vercel Deployment (Monitoring Only)
+**Best for:** Quick serverless monitoring dashboard
+
+⚠️ **Note:** Vercel is serverless, so SSH/tmate features won't work. You'll get system monitoring only.
+
+**Deploy to Vercel:**
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/biswajr/AnyShell)
+
+Or see [README.vercel.md](README.vercel.md) for detailed Vercel deployment instructions.
+
+**For SSH access, use Docker deployment on platforms like:**
+- Railway.app
+- Render.com
+- Fly.io
+- AWS/DigitalOcean/Heroku
 
 ## 🔧 Deployment & Usage
 

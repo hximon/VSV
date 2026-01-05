@@ -46,18 +46,18 @@
                 document.getElementById("regen-btn").textContent = "Generating...";
 
                 const response = await fetch('/regenerate', { method: 'POST' });
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.status === "success") {
-                        document.getElementById("ssh-url").textContent = data.ssh_url;
-                    } else {
-                        console.error("Failed to regenerate SSH:", data.message);
-                    }
+                const data = await response.json();
+                
+                if (data.status === "success") {
+                    document.getElementById("ssh-url").textContent = data.ssh_url;
+                    alert("SSH session regenerated successfully!");
                 } else {
-                    console.error("Failed to reach the server.");
+                    alert("Error: " + (data.message || "Failed to regenerate SSH"));
+                    console.error("Failed to regenerate SSH:", data.message);
                 }
             } catch (error) {
                 console.error("Error:", error);
+                alert("Error: Unable to regenerate SSH session");
             } finally {
                 document.getElementById("regen-btn").disabled = false;
                 document.getElementById("regen-btn").textContent = "Regenerate";
